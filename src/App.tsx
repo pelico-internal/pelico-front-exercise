@@ -1,10 +1,37 @@
-import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import { CartContextProvider } from "./context/cart.context";
+import { Cart } from "./pages/cart";
+import { Home } from "./pages/home";
+import { Layout } from "./pages/layout";
+import { Product } from "./pages/product";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/product/:id",
+        element: <Product />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <h1>Web store application</h1>
-    </div>
+    <CartContextProvider>
+      <RouterProvider router={router} />
+    </CartContextProvider>
   );
 }
 
