@@ -21,5 +21,5 @@ https://fakestoreapi.com/
 
 
 ### Notes
-Project has `react-router-dom` v6 installed. Documentation:
-https://reactrouter.com/docs/en/v6/getting-started/overview
+Project has `react-router-dom` v7.9.6 installed. Documentation:
+https://reactrouter.com/7.9.6/home

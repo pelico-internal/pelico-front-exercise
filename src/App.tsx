@@ -1,11 +1,10 @@
-import './App.css'
-
 function App() {
+
   return (
-    <div className="App">
-      <h1>Web store application</h1>
-    </div>
-  );
+    <p>
+      Hello there
+    </p>
+  )
 }
 
-export default App;
+export default App
